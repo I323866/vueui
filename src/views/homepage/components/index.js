@@ -5,3 +5,6 @@ export { default as wordChart } from "./wordChart.vue";
 export { default as funnelChart } from "./funnelChart.vue";
 export { default as lineChart } from "./lineChart.vue";
 export { default as liquidChart } from "./liquidChart.vue";
+export { default as waf } from "./waf.vue";
+export { default as ctable } from "./ctable.vue";
+

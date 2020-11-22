@@ -1,26 +1,26 @@
 <template>
   <div class="home-container">
     <z-row :gutter="15">
-      <z-col :span="7">
+      <!-- <z-col :span="7"> -->
         <div class="echartList">
           <div class="chart-item">
-            <box-container :boxTitle="year + '年销售额度排名'">
-              <city-count />
+            <box-container :boxTitle="'天气影响航班图'">
+              <waf />
             </box-container>
           </div>
           <div class="chart-item">
-            <box-container :boxTitle="year + '年销售种类占比'">
+            <box-container :boxTitle="'天气影响表'">
+              <ctable />
+            </box-container>
+          </div>
+          <div class="chart-item">
+            <!-- <box-container :boxTitle="year + '年销售种类占比'">
               <type-count />
-            </box-container>
-          </div>
-          <div class="chart-item">
-            <box-container :boxTitle="year + '年销售品牌占比'">
-              <word-chart />
-            </box-container>
+            </box-container> -->
           </div>
         </div>
-      </z-col>
-      <z-col :span="10">
+      <!-- </z-col> -->
+      <!-- <z-col :span="10">
         <count-to :value="sum" suffix="万" :speed="20" />
         <div style="width:100%;height:85%">
           <scatter-map />
@@ -44,7 +44,7 @@
             </box-container>
           </div>
         </div>
-      </z-col>
+      </z-col> -->
     </z-row>
   </div>
 </template>
@@ -62,6 +62,8 @@ import {
   funnelChart,
   lineChart,
   liquidChart,
+  waf,
+  ctable,
 } from "./components";
 import useResize from "@/componentApi/useResize.js";
 import { ref } from "vue";
@@ -81,6 +83,8 @@ export default {
     liquidChart,
     fourAngel,
     countTo,
+    waf,
+    ctable
   },
   setup(props, context) {
     const { year, sum } = useResize();

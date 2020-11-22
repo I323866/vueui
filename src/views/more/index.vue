@@ -2,7 +2,7 @@
   <div class="more-container">
     <z-row :gutter="12">
       <z-col :span="7">
-        <div class="echartList">
+        <!-- <div class="echartList">
           <div class="itemChart">
             <four-angel>
               <gauge-chart />
@@ -18,17 +18,17 @@
               <radar-chart />
             </four-angel>
           </div>
-        </div>
+        </div> -->
       </z-col>
       <z-col :span="10">
-        <four-angel>
-          <component :is="mapType" @changeMap="getMap" />
-        </four-angel>
+          <four-angel>
+            <gaugeChart />
+          </four-angel>
       </z-col>
       <z-col :span="7">
-        <four-angel>
+        <!-- <four-angel>
           <graph-chart />
-        </four-angel>
+        </four-angel> -->
       </z-col>
     </z-row>
   </div>
@@ -94,4 +94,6 @@ export default {
     }
   }
 }
+
+
 </style>

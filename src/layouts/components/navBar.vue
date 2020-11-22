@@ -1,6 +1,6 @@
 <template>
   <div class="nav-wrapper">
-    <div class="bar-title" @click.stop="toHome">大数据分析系统</div>
+    <div class="bar-title" @click.stop="toHome">天气影响航班分析系统</div>
     <div class="time">{{ date }} {{ time }}</div>
     <div class="mapChoose" v-if="parentInfo.length > 1 && isHome">
       <span v-for="(item, index) in parentInfo" :key="item.code">
